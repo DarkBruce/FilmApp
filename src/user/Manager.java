@@ -5,9 +5,9 @@ public class Manager {
      * 管理员用户类
      *
      */
-    private String managerID;
-    private String managerName;
-    private String managerPassword;
+    private String managerID;               //管理员ID
+    private String managerName;             //管理员姓名
+    private String managerPassword;         //管理员口令
 
     private String DBuser = "root1";
     private String DBpassword = "L90efcad1";

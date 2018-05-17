@@ -10,7 +10,7 @@ public class User {
     private String password;        //口令
     private String userID;          //用户编号
 
-    private String DBuser = "normaluser";
+    private String DBuser = "normaluser";       //普通用户的数据库用户名口令组
     private String DBpassword = "123456";
 
     public User(String username, String password, String userID){
