@@ -125,4 +125,16 @@ public class DBOperator {
     public String getSql() {
         return sql;
     }
+
+    public List<Person> getPersonList() {
+        return personList;
+    }
+
+    public List<Film> getFilmList() {
+        return filmList;
+    }
+
+    public List<Firm> getFirmList() {
+        return firmList;
+    }
 }

@@ -17,6 +17,20 @@ public class Film {
     private Person[] voice;         //旁白
     private String plot;            //电影情节
 
+    public Film(String filmID, String filmName, String publishYear, String publishFirm, String length, String[] category, Person[] director,
+                Person[] actor, Person[] voice, String plot){
+        this.flimID = filmID;
+        this.filmName = filmName;
+        this.publishYear = publishYear;
+        this.publishFirm = publishFirm;
+        this.length = length;
+        this.category = category;
+        this.director = director;
+        this.actor = actor;
+        this.voice = voice;
+        this.plot = plot;
+    }
+
     public String getFlimID() {
         return flimID;
     }
