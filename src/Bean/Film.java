@@ -1,16 +1,21 @@
 package Bean;
 
+/**
+ * 电影类
+ *
+ */
+
 public class Film {
-    private String flimID;
-    private String filmName;
-    private String publishYear;
-    private String publishFirm;
-    private String length;
-    private String[] category;
-    private Person[] director;
-    private Person[] actor;
-    private Person[] voice;
-    private String plot;
+    private String flimID;          //电影编号
+    private String filmName;        //电影名称
+    private String publishYear;     //发行年份
+    private String publishFirm;     //发行公司
+    private String length;          //电影时长
+    private String[] category;      //电影类别
+    private Person[] director;      //导演
+    private Person[] actor;         //演员
+    private Person[] voice;         //旁白
+    private String plot;            //电影情节
 
     public String getFlimID() {
         return flimID;
