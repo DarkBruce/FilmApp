@@ -7,10 +7,16 @@ public class Manager {
      */
     private String managerID;               //管理员ID
     private String managerName;             //管理员姓名
-    private String managerPassword;         //管理员口令
+    private String managerPW;         //管理员口令
 
     private String DBuser = "root1";
     private String DBpassword = "L90efcad1";
+
+    public Manager(String managerID, String managerName, String managerPW) {
+        this.managerID = managerID;
+        this.managerName = managerName;
+        this.managerPW = managerPW;
+    }
 
 
     public String getManagerID() {
@@ -21,8 +27,8 @@ public class Manager {
         return managerName;
     }
 
-    public String getManagerPassword() {
-        return managerPassword;
+    public String getManagerPW() {
+        return managerPW;
     }
 
     public String getDBuser() {
