@@ -22,14 +22,16 @@ public class DBLogin {
     private Connection conn;
     private Statement statement;
     private ResultSet rs;
-    private Manager manager;
-    private User user;
+    private Boolean nullFlag;
+
+    private Manager manager = null;
+    private User user = null;
 
     public DBLogin(String username, String password,Boolean isManager){
         this.username = username;
         this.password = password;
         this.isManager = isManager;
-
+        this.nullFlag = false;
     }
 
     public Connection getSqlConnection(){
@@ -79,19 +81,23 @@ public class DBLogin {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(isManager){
-            String managerID = resultSet.getString("managerID");
-            String managerName = resultSet.getString("managerName");
-            String managerPW = resultSet.getString("managerPW");
-            manager = new Manager(managerID,managerName,managerPW);
+        //查询结果不为空，即该用户名存在
+        if(resultSet.next()){
+            if(isManager){
+                String managerName = resultSet.getString("username");
+                String managerPW = resultSet.getString("password");
+                this.manager = new Manager(managerName,managerPW);
+            }
+            else{
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
+                this.user = new User(username,password);
+            }
+            nullFlag = false;
         }
-        else{
-            String userID = resultSet.getString("userID");
-            String username = resultSet.getString("username");
-            String password = resultSet.getString("password");
-            user = new User(userID,username,password);
-        }
-
+        //查询结果为空
+        else
+            nullFlag = true;
     }
 
     public void close() {
@@ -116,5 +122,17 @@ public class DBLogin {
 
     public User getUser() {
         return user;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Boolean getNullFlag() {
+        return nullFlag;
     }
 }
