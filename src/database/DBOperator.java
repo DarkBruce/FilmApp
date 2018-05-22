@@ -26,6 +26,10 @@ public class DBOperator {
     private String sql;
     private ResultSet rs;
 
+    public String queryCode;
+    //查询操作码,film:查Film实体，person:查Person实体，firm:查Firm实体，actor:查Actor关系，
+    // director:查Director关系，voice:查Voice关系，category:查类别关系
+
     private List<Person> personList = new ArrayList<>();
     private List<Film> filmList = new ArrayList<>();
     private List<Firm> firmList = new ArrayList<>();
@@ -77,11 +81,12 @@ public class DBOperator {
      * @param sql
      * @return
      */
-    public void query(String sql){
+    public void query(String sql,String queryCode){
         ResultSet resultSet = null;
         Statement statement = getStatement();
         try {
             resultSet = statement.executeQuery(sql);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

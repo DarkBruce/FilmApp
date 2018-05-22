@@ -100,6 +100,17 @@ public class DBLogin {
             nullFlag = true;
     }
 
+    public int update(String sql){
+        int result = 0;
+        Statement stat = getStatement();
+        try {
+            result = stat.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
     public void close() {
         try {
             if (statement != null)

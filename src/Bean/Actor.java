@@ -1,21 +1,25 @@
 package Bean;
 
 public class Actor {
-    private String name;
-    private String actFilm;
+    private String nameID;
+    private String actFilmID;
     private String[] role;
 
     public Actor(String name,String actFilm, String[] role){
-        this.name = name;
-        this.actFilm = actFilm;
+        this.nameID = name;
+        this.actFilmID = actFilm;
         this.role = role;
     }
 
     public String getActFilm() {
-        return actFilm;
+        return actFilmID;
     }
 
     public String[] getRole() {
         return role;
+    }
+
+    public String getNameID() {
+        return nameID;
     }
 }
