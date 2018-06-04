@@ -1,6 +1,7 @@
 package database;
 
 
+import Bean.Actor;
 import Bean.Film;
 import Bean.Firm;
 import Bean.Person;
@@ -14,17 +15,13 @@ import java.util.List;
  * 数据库操作类
  */
 public class DBOperator {
-    private static String url="jdbc:mysql://localhost:3306/FilmSystem?useSSL=false&useUnicode=true&amp;characterEncoding=UTF-8";
+    private static String url="jdbc:mysql://localhost:3306/film?useSSL=false&useUnicode=true&amp;characterEncoding=UTF-8";
     private static String driverName = "com.mysql.jdbc.Driver";
     private String user;
     private String password;
 
-
-    private String tableName;
     private Connection conn;
     private Statement statement;
-    private String sql;
-    private ResultSet rs;
 
     public String operateObject;
     //操作对象,film:查Film实体，person:查Person实体，firm:查Firm实体，actor:查Actor关系，
@@ -88,40 +85,43 @@ public class DBOperator {
             if(this.operateObject.equals("film")){
                 while(resultSet.next()){
                     String filmID = resultSet.getString("FilmID");
-                    String firmID = resultSet.getString("FirmID");
+                    String firmName = resultSet.getString("FirmName");
                     String filmName = resultSet.getString("FilmName");
                     String filmYear = resultSet.getString("FilmYear");
                     String filmLength = resultSet.getString("FilmLength");
                     String filmPlot = resultSet.getString("FilmPlot");
 
-                    String firmName = "";
 
-                    String sql1 = "select FirmName from Firm where FirmID=" + firmID + " ;";
-                    String sql2 = "select * from Actor where FilmID=" + filmID + " ;";
-                    String sql3 = "select PersonID from Director where FilmID=" + filmID + " ;";
-                    String sql4 = "select PersonID from Voice where FilmID=" + filmID + " ;";
-                    String sql5 = "select DYLB_LB from Category where FilmID=" + filmID + " ;";
+                    String sql1 = "select DYLB_LB from Category where FilmID=" + filmID + " ;";
+                    String sql2 = "select Person.* from Film,Actor,Person " +
+                            "where FilmID=" + filmID + " and Film.FilmID=Actor.FilmID and Actor.PersonID=Person.PersonID ;";
+                    String sql3 = "select Person.* from Film,Director,Person " +
+                            "where FilmID=" + filmID + " and Film.FilmID=Director.FilmID and Director.PersonID=Person.PersonID ;";
+                    String sql4 = "select Person.* from Film,Voice,Person " +
+                            "where FilmID=" + filmID + " and Film.FilmID=Voice.FilmID and Voice.PersonID=Person.PersonID ;";
+
 
 
                     ResultSet resultSet1 = statement.executeQuery(sql1);
                     ResultSet resultSet2 = statement.executeQuery(sql2);
                     ResultSet resultSet3 = statement.executeQuery(sql3);
                     ResultSet resultSet4 = statement.executeQuery(sql4);
-                    ResultSet resultSet5 = statement.executeQuery(sql5);
+
+                    List<String> categoryList = new ArrayList<>();
+                    List<Person> actorList;
+                    List<Person> directorList;
+                    List<Person> voiceList;
+
                     while(resultSet1.next()){
-                        firmName = resultSet1.getString("FirmName");
+                        String category = resultSet1.getString("DYLB_LB");
+                        categoryList.add(category);
                     }
-                    while(resultSet2.next()){
-                        String personID = resultSet2.getString("PersonID");
-                        String role = resultSet2.getString("Role");
-                        String sqlPerson = "select * from Person where PersonID=" + personID + " ;";
-
-                    }
-                    Film film = new Film(filmID,filmName,filmYear,firmName,filmLength,null,null,null
-                    ,null,filmPlot);
-
+                    actorList = getResultPerson(resultSet2);
+                    directorList = getResultPerson(resultSet3);
+                    voiceList = getResultPerson(resultSet4);
+                    Film film = new Film(filmID,filmName,filmYear,firmName,filmLength,
+                            categoryList,directorList,actorList,voiceList,filmPlot);
                     filmList.add(film);
-
                 }
             }
         } catch (SQLException e) {
@@ -159,12 +159,23 @@ public class DBOperator {
         }
     }
 
-    public String getTableName() {
-        return tableName;
-    }
-
-    public String getSql() {
-        return sql;
+    /**
+     *
+     * @param resultSet
+     * @return personList
+     * @throws SQLException
+     */
+    //获取查询人物结果函数
+    private List<Person> getResultPerson(ResultSet resultSet) throws SQLException {
+        List<Person> personList = new ArrayList<>();
+        while(resultSet.next()){
+            String personName = resultSet.getString("PersonName");
+            String personID = resultSet.getString("PersonID");
+            String personBirth = resultSet.getString("PersonBirth");
+            Person person = new Person(personID,personName,personBirth,null,null,null);
+            personList.add(person);
+        }
+        return personList;
     }
 
     public List<Person> getPersonList() {

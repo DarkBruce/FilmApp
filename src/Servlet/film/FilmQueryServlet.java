@@ -1,6 +1,7 @@
 package Servlet.film;
 
 import Bean.Film;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import utils.QueryFilm;
 
 import javax.servlet.ServletException;
@@ -15,13 +16,25 @@ import java.util.List;
 @WebServlet(name = "FilmQueryServlet")
 public class FilmQueryServlet extends HttpServlet {
     private String filmName;
+    private String filmCategory;
+    private Boolean isName = false;
+
     private List<Film> filmList = new ArrayList<>();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         filmName = request.getParameter("FilmName");
-        QueryFilm queryFilm = new QueryFilm(filmName);
-        request.setAttribute("filmList",this.filmList);
-        request.getRequestDispatcher("/film/filmNameQueryResult.jsp").forward(request,response);
+        filmCategory = request.getParameter("kind");
+        if(filmName!=null) {
+            this.isName = true;
+        }
+        else if(filmCategory!=null){
+            this.isName = false;
+        }
+            QueryFilm queryFilm = new QueryFilm(filmName);
+            queryFilm.executeQuery();
+            request.setAttribute("filmList",this.filmList);
+            request.getRequestDispatcher("/film/filmNameQueryResult.jsp").forward(request,response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -10,7 +10,9 @@ public class User {
     private String password;        //口令
 
 
-    private String DBuser = "normaluser";       //普通用户的数据库用户名口令组
+//    private String DBuser = "normaluser";       //普通用户的数据库用户名口令组(filmsystem数据库）
+//    private String DBpassword = "123456";
+    private String DBuser = "user1";       //普通用户的数据库用户名口令组(film数据库)
     private String DBpassword = "123456";
 
     public User(String username, String password ){

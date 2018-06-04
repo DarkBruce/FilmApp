@@ -84,7 +84,7 @@
                 <button id="" type="submit" class="layui-btn layui-btn-primary layui-btn-radius div-right3" onclick="window.location.href='index.html'">查询</button>
             </td>
         </form>
-        <form id="ft" style="visibility:hidden" class="layui-form layui-form-pane" action="" onsubmit="">
+        <form id="ft" style="visibility:hidden" class="layui-form layui-form-pane" action="${pageContext.request.contextPath}/FilmQuery" method="post" onsubmit="">
             <div class="layui-form-item">
                 <label class="layui-form-label"><font color="gray">电影类别</font></label>
                 <div class="layui-input-inline">

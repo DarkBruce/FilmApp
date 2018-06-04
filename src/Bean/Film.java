@@ -1,5 +1,8 @@
 package Bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 电影类
  *
@@ -12,21 +15,21 @@ public class Film {
     private String publishFirm;     //发行公司
     private String firmID;          //发行公司ID
     private String length;          //电影时长
-    private String[] category;      //电影类别
-    private Person[] director;      //导演
-    private Person[] actor;         //演员
-    private Person[] voice;         //旁白
+    private List<String> categoryList = new ArrayList<>();      //电影类别
+    private List<Person> director;      //导演
+    private List<Person> actor;         //演员
+    private List<Person> voice;         //旁白
     private String plot;            //电影情节
 
 
-    public Film(String filmID, String filmName, String publishYear, String publishFirm, String length, String[] category, Person[] director,
-                Person[] actor, Person[] voice, String plot){
+    public Film(String filmID, String filmName, String publishYear, String publishFirm, String length, List<String> categoryList,
+                List<Person> director, List<Person> actor, List<Person> voice, String plot){
         this.filmID = filmID;
         this.filmName = filmName;
         this.publishYear = publishYear;
         this.publishFirm = publishFirm;
         this.length = length;
-        this.category = category;
+        this.categoryList = categoryList;
         this.director = director;
         this.actor = actor;
         this.voice = voice;
@@ -53,23 +56,12 @@ public class Film {
         return length;
     }
 
-    public String[] getCategory() {
-        return category;
-    }
-
-    public Person[] getDirector() {
-        return director;
-    }
-
-    public Person[] getActor() {
-        return actor;
-    }
-
-    public Person[] getVoice() {
-        return voice;
-    }
 
     public String getPlot() {
         return plot;
+    }
+
+    public List<String> getCategoryList() {
+        return categoryList;
     }
 }
