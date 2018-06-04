@@ -67,7 +67,7 @@
     <div class="title">
         <h1>注册页</h1>
     </div>
-    <form class="layui-form" method="post" >
+    <form class="layui-form" action="${pageContext.request.contextPath}/Register" method="post" >
         <!-- 用户名 -->
         <div class="layui-input-inline">
             <div class="layui-form-item" style="margin-right: 100px;margin-top: 20px;">

@@ -21,7 +21,7 @@
     <link href="afctf/css/countdown.css" rel="stylesheet" type="text/css" media="all" />
     <link href="afctf/css/challenge.css" rel="stylesheet" type="text/css" media="all" />
     <script src="afctf/js/jquery-3.3.1.min.js"></script>
-    <script src="afctf/js/layer/layer.js"></script>
+    <script src="afctf/js/layer.js"></script>
     <script src="afctf/js/echarts.min.js"></script>
     <script src="afctf/js/utils.js"></script>
     <script src="afctf/js/challenge.js"></script>
@@ -48,7 +48,7 @@
 <div class="bh">
     <div class="header">
         <div class="logo">
-            <h1><a href="login.html"><img src="img/logo.png" alt=""></a></h1>
+            <h1><a href="login.jsp"><img src="img/logo.png" alt=""></a></h1>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 70%;max-width: 50%;display: block;width: 100%">
             <div class="title">
@@ -68,7 +68,7 @@
     <div class="title">
         <h1>登录页</h1>
     </div>
-    <form action = "LoginServlet" class="layui-form" method="post" >
+    <form action = "${pageContext.request.contextPath}/Login" class="layui-form" method="post" >
         <!-- 用户名 -->
         <div class="layui-input-inline">
             <div class="layui-form-item" style="margin-right: 100px;margin-top: 20px;">
@@ -98,8 +98,8 @@
         <input type="radio" name="xx" value="ftype" onclick="clickRadioValue()"><a>管理员登陆</a>
         <br>
             </br>
-            <a href="register.html">没有账号？立即注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="password.html">忘记密码？</a>
+            <a href="register.jsp">没有账号？立即注册&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="alterPW.jsp">忘记密码？</a>
     </form>
     <br/>
 </div>

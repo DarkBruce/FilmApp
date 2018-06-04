@@ -26,19 +26,18 @@ public class DBOperator {
     private String sql;
     private ResultSet rs;
 
-    public String queryCode;
-    //查询操作码,film:查Film实体，person:查Person实体，firm:查Firm实体，actor:查Actor关系，
+    public String operateObject;
+    //操作对象,film:查Film实体，person:查Person实体，firm:查Firm实体，actor:查Actor关系，
     // director:查Director关系，voice:查Voice关系，category:查类别关系
 
     private List<Person> personList = new ArrayList<>();
     private List<Film> filmList = new ArrayList<>();
     private List<Firm> firmList = new ArrayList<>();
 
-    public DBOperator(String user, String password, String tableName, String sql){
+    public DBOperator(String user, String password,String operateObject){
         this.user = user;
         this.password = password;
-        this.tableName = tableName;
-        this.sql = sql;
+        this.operateObject = operateObject;
     }
 
     public Connection getSqlConnection(){
@@ -59,7 +58,7 @@ public class DBOperator {
 
     /**
      * 获取Statement
-     * @return
+     * @return statement
      * @throws SQLException
      */
     public Statement getStatement(){
@@ -79,19 +78,56 @@ public class DBOperator {
     /**
      * 执行查询sql语句
      * @param sql
-     * @return
      */
-    public void query(String sql,String queryCode){
+    public void query(String sql){
         ResultSet resultSet = null;
         Statement statement = getStatement();
         try {
             resultSet = statement.executeQuery(sql);
+            //查询电影
+            if(this.operateObject.equals("film")){
+                while(resultSet.next()){
+                    String filmID = resultSet.getString("FilmID");
+                    String firmID = resultSet.getString("FirmID");
+                    String filmName = resultSet.getString("FilmName");
+                    String filmYear = resultSet.getString("FilmYear");
+                    String filmLength = resultSet.getString("FilmLength");
+                    String filmPlot = resultSet.getString("FilmPlot");
 
+                    String firmName = "";
+
+                    String sql1 = "select FirmName from Firm where FirmID=" + firmID + " ;";
+                    String sql2 = "select * from Actor where FilmID=" + filmID + " ;";
+                    String sql3 = "select PersonID from Director where FilmID=" + filmID + " ;";
+                    String sql4 = "select PersonID from Voice where FilmID=" + filmID + " ;";
+                    String sql5 = "select DYLB_LB from Category where FilmID=" + filmID + " ;";
+
+
+                    ResultSet resultSet1 = statement.executeQuery(sql1);
+                    ResultSet resultSet2 = statement.executeQuery(sql2);
+                    ResultSet resultSet3 = statement.executeQuery(sql3);
+                    ResultSet resultSet4 = statement.executeQuery(sql4);
+                    ResultSet resultSet5 = statement.executeQuery(sql5);
+                    while(resultSet1.next()){
+                        firmName = resultSet1.getString("FirmName");
+                    }
+                    while(resultSet2.next()){
+                        String personID = resultSet2.getString("PersonID");
+                        String role = resultSet2.getString("Role");
+                        String sqlPerson = "select * from Person where PersonID=" + personID + " ;";
+
+                    }
+                    Film film = new Film(filmID,filmName,filmYear,firmName,filmLength,null,null,null
+                    ,null,filmPlot);
+
+                    filmList.add(film);
+
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
     /**
      * 执行更新sql语句
      * @param sql

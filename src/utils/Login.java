@@ -36,9 +36,10 @@ public class Login {
         else
             sql = "SELECT * FROM user where username="+ this.username + " ;";           //如果是普通用户则查普通用户表
         this.dbLogin = new DBLogin(username,password,isManager);
+        this.check();
     }
 
-    public void Check(){
+    public void check(){
         try {
             this.dbLogin.query(sql);
         } catch (SQLException e) {

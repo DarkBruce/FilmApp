@@ -28,27 +28,45 @@ public class Register {
     private User user;
     private Manager manager;
 
+
+    /**
+     * 注册用户构造函数
+     * @param username
+     * @param password
+     * @param isManager
+     */
     public Register(String username,String password,Boolean isManager){
         this.username = username;
         this.password = password;
         this.isManager = isManager;
         this.existedFlag = false;
+        this.checkExisted();
         this.sql = makeSQL(username,password,isManager);
     }
 
+    /**
+     * 注册SQL语句生成函数
+     * @param username
+     * @param password
+     * @param isManager
+     * @return sql
+     */
     public String makeSQL(String username,String password,Boolean isManager){
         String sql = "Insert into ";
         if(isManager){
-            sql = sql + " user";
+            sql = sql + " user ";
         }
         else{
-            sql = sql + " manager";
+            sql = sql + " manager ";
         }
         sql = sql + "(username,password) values (" + username + "," + password + ");";
         return sql;
     }
 
-    public void checkExisted(){
+    /**
+     * 检查注册的用户名是否已经存在
+     */
+    private void checkExisted(){
         String sql1 = "";
         //构造SQL语句
         if(isManager){
@@ -62,9 +80,11 @@ public class Register {
         try {
             dbLogin.query(sql1);
             if(dbLogin.getNullFlag()){
+                //数据库中不存在将要注册的用户名
                 this.existedFlag = false;
             }
             else{
+                //数据库中存在将要注册的用户名
                 this.existedFlag = true;
                 this.errorInfo = "Username " + this.username + " has already existed!";
             }
@@ -73,6 +93,9 @@ public class Register {
         }
     }
 
+    /**
+     * 执行注册
+     */
     public void executeRegister(){
         if(!this.existedFlag){
             //没有已存在的用户名，注册成功

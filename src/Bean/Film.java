@@ -6,10 +6,11 @@ package Bean;
  */
 
 public class Film {
-    private String flimID;          //电影编号
+    private String filmID;          //电影编号
     private String filmName;        //电影名称
     private String publishYear;     //发行年份
     private String publishFirm;     //发行公司
+    private String firmID;          //发行公司ID
     private String length;          //电影时长
     private String[] category;      //电影类别
     private Person[] director;      //导演
@@ -17,9 +18,10 @@ public class Film {
     private Person[] voice;         //旁白
     private String plot;            //电影情节
 
+
     public Film(String filmID, String filmName, String publishYear, String publishFirm, String length, String[] category, Person[] director,
                 Person[] actor, Person[] voice, String plot){
-        this.flimID = filmID;
+        this.filmID = filmID;
         this.filmName = filmName;
         this.publishYear = publishYear;
         this.publishFirm = publishFirm;
@@ -32,7 +34,7 @@ public class Film {
     }
 
     public String getFlimID() {
-        return flimID;
+        return filmID;
     }
 
     public String getFilmName() {

@@ -33,7 +33,6 @@ public class Query {
         this.username = username;
         this.password = password;
         this.sql = "select * from Film where FilmName=" + filmName + " ;";
-
     }
 
     //发行公司对应的构造函数
