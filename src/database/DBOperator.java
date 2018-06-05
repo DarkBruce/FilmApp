@@ -30,6 +30,7 @@ public class DBOperator {
     private List<Person> personList = new ArrayList<>();
     private List<Film> filmList = new ArrayList<>();
     private List<Firm> firmList = new ArrayList<>();
+    private Firm firm;
 
     public DBOperator(String user, String password,String operateObject){
         this.user = user;
@@ -81,7 +82,7 @@ public class DBOperator {
         Statement statement = getStatement();
         try {
             resultSet = statement.executeQuery(sql);
-            //查询电影
+            //查询电影，返回结果为电影基本信息和出品公司名称，然后再查对应的类别、演员、导演、旁白
             if(this.operateObject.equals("film")){
                 while(resultSet.next()){
                     String filmID = resultSet.getString("FilmID");
@@ -124,9 +125,27 @@ public class DBOperator {
                     filmList.add(film);
                 }
             }
+            //查询出品公司
+            else if(this.operateObject.equals("firm")){
+                while(resultSet.next()){
+                    String firmID = resultSet.getString("FirmID");
+                    String firmName = resultSet.getString("FirmName");
+                    String firmCity = resultSet.getString("FirmCity");
+
+                    List<String> filmNameList = new ArrayList<>();
+                    String sql1 = "select FilmName from Film where FirmID='" + firmID + "' ;";
+                    ResultSet resultSet1 = statement.executeQuery(sql1);
+                    while(resultSet1.next()){
+                        String filmName = resultSet1.getString("FilmName");
+                        filmNameList.add(filmName);
+                    }
+                    this.firm = new Firm(firmID,firmName,firmCity,filmNameList);
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        this.close();
     }
     /**
      * 执行更新sql语句
@@ -188,5 +207,9 @@ public class DBOperator {
 
     public List<Firm> getFirmList() {
         return firmList;
+    }
+
+    public Firm getFirm() {
+        return firm;
     }
 }

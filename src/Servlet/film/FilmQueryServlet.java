@@ -26,14 +26,21 @@ public class FilmQueryServlet extends HttpServlet {
         filmCategory = request.getParameter("kind");
         if(filmName!=null) {
             this.isName = true;
+            QueryFilm queryFilm = new QueryFilm(filmName, true);
+            queryFilm.executeQuery();
+            this.filmList = queryFilm.getFilmList();
+            request.setAttribute("filmList",this.filmList);
+            request.getRequestDispatcher("/film/filmNameQueryResult.jsp").forward(request,response);
         }
         else if(filmCategory!=null){
             this.isName = false;
-        }
-            QueryFilm queryFilm = new QueryFilm(filmName);
+            QueryFilm queryFilm = new QueryFilm(filmCategory,false);
             queryFilm.executeQuery();
+            this.filmList = queryFilm.getFilmList();
             request.setAttribute("filmList",this.filmList);
-            request.getRequestDispatcher("/film/filmNameQueryResult.jsp").forward(request,response);
+            request.getRequestDispatcher("/film/filmCategoryQueryResult.jsp").forward(request,response);
+        }
+
 
     }
 
