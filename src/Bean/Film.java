@@ -37,6 +37,7 @@ public class Film {
     }
 
     public String getFlimID() {
+
         return filmID;
     }
 
@@ -63,5 +64,17 @@ public class Film {
 
     public List<String> getCategoryList() {
         return categoryList;
+    }
+
+    public List<Person> getDirector() {
+        return director;
+    }
+
+    public List<Person> getActor() {
+        return actor;
+    }
+
+    public List<Person> getVoice() {
+        return voice;
     }
 }

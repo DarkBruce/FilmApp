@@ -15,8 +15,6 @@ import java.util.List;
  * 数据库操作类
  */
 public class DBOperator {
-    private static String url="jdbc:mysql://localhost:3306/film?useSSL=false&useUnicode=true&amp;characterEncoding=UTF-8";
-    private static String driverName = "com.mysql.jdbc.Driver";
     private String user;
     private String password;
 
@@ -41,13 +39,15 @@ public class DBOperator {
     public Connection getSqlConnection(){
         Connection sqlConnection = null;
         try {
+            String driverName = "com.mysql.jdbc.Driver";
             Class.forName(driverName);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
         try {
-            sqlConnection = DriverManager.getConnection(url,user,password);
+            String url = "jdbc:mysql://localhost:3306/film?useSSL=false&useUnicode=true&amp;characterEncoding=UTF-8";
+            sqlConnection = DriverManager.getConnection(url,this.user,this.password);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -163,6 +163,9 @@ public class DBOperator {
         return result;
     }
 
+    /**
+     * 关闭SQL连接和Statement
+     */
     public void close() {
         try {
             if (statement != null)

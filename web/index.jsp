@@ -15,8 +15,8 @@
   <script type="text/javascript" src="/film/js/jquery.js"></script>
   <script type="text/javascript" src="/film/js/sliding_effect.js"></script>
   <script type="application/javascript" src="/layui/layui.all.js"></script>
-  <link href="../layui/css/layui.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../afctf/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="layui/css/layui.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="afctf/css/style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="../afctf/css/reser.css" rel="stylesheet" type="text/css" media="all" />
   <link href="../afctf/css/countdown.css" rel="stylesheet" type="text/css" media="all" />
   <link href="../afctf/css/challenge.css" rel="stylesheet" type="text/css" media="all" />
@@ -59,11 +59,11 @@
 <div id="navigation-block">
   <h1>电影查询</h1>
   <ul id="sliding-navigation">
-    <li class="sliding-element"><a href="/film/index.jsp" style="font-size:20px; font-family:verdana">电影</a></li>
-    <li class="sliding-element"><a href="/film/actorQuery.jsp" style="font-size:20px; font-family:verdana">演员</a></li>
-    <li class="sliding-element"><a href="/film/directorQuery.jsp" style="font-size:20px; font-family:verdana">导演</a></li>
-    <li class="sliding-element"><a href="/film/voice_Query.jsp" style="font-size:20px; font-family:verdana">旁白</a></li>
-    <li class="sliding-element"><a href="/film/firmQuery.jsp" style="font-size:20px; font-family:verdana">发行公司</a></li>
+    <li class="sliding-element"><a href="film/index.jsp" style="font-size:20px; font-family:verdana">电影</a></li>
+    <li class="sliding-element"><a href="film/actorQuery.jsp" style="font-size:20px; font-family:verdana">演员</a></li>
+    <li class="sliding-element"><a href="film/directorQuery.jsp" style="font-size:20px; font-family:verdana">导演</a></li>
+    <li class="sliding-element"><a href="film/voice_Query.jsp" style="font-size:20px; font-family:verdana">旁白</a></li>
+    <li class="sliding-element"><a href="film/firmQuery.jsp" style="font-size:20px; font-family:verdana">发行公司</a></li>
   </ul>
 </div>
 

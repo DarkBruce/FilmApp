@@ -59,11 +59,11 @@
 <div id="navigation-block">
     <h1>电影查询</h1>
     <ul id="sliding-navigation">
-        <li class="sliding-element"><a href="filmquery.html" style="font-size:20px; font-family:verdana">电影</a></li>
-        <li class="sliding-element"><a href="actorquery.html" style="font-size:20px; font-family:verdana">演员</a></li>
-        <li class="sliding-element"><a href="directorquery.html" style="font-size:20px; font-family:verdana">导演</a></li>
-        <li class="sliding-element"><a href="voicequery.html" style="font-size:20px; font-family:verdana">旁白</a></li>
-        <li class="sliding-element"><a href="firmquery.html" style="font-size:20px; font-family:verdana">发行公司</a></li>
+        <li class="sliding-element"><a href="filmQuery.jsp" style="font-size:20px; font-family:verdana">电影</a></li>
+        <li class="sliding-element"><a href="actorQuery.jsp" style="font-size:20px; font-family:verdana">演员</a></li>
+        <li class="sliding-element"><a href="directorQuery.jsp" style="font-size:20px; font-family:verdana">导演</a></li>
+        <li class="sliding-element"><a href="voice_Query.jsp" style="font-size:20px; font-family:verdana">旁白</a></li>
+        <li class="sliding-element"><a href="firmQuery.jsp" style="font-size:20px; font-family:verdana">发行公司</a></li>
     </ul>
 </div>
 

@@ -11,3 +11,16 @@
 ​	廖贝尔——数据库结构设计。
 
 2、
+
+
+
+遇到的问题：
+
+1、tomcat传输中文为乱码：在servlet中设置字符集编码格式即可转为中文，代码为
+
+~~~java
+request.setCharacterEncoding("utf-8");
+~~~
+
+
+
