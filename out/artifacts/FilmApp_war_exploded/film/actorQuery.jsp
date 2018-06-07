@@ -33,7 +33,7 @@
 <div class="bh">
     <div class="header">
         <div class="logo">
-            <h1><a href="actorquery.html"><img src="../img/logo.png" alt=""></a></h1>
+            <h1><a href="actorQuery.jsp"><img src="../img/logo.png" alt=""></a></h1>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 70%;max-width: 50%;display: block;width: 100%">
             <div class="title">
@@ -46,7 +46,7 @@
                 <li id="username"><span style="margin-right:20px;max-width:120px;display:block;overflow:hidden;">用户昵称</span>
                 </li>
                 <li><span>/</span></li>
-                <li id="logout"><a href="../login.html" style="">退出登录</a></li>
+                <li id="logout"><a href="../login.jsp" style="">退出登录</a></li>
             </ul>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 4.5%;max-width: 10%;display: block;width: 100%">
@@ -59,11 +59,11 @@
 <div id="navigation-block">
     <h1>电影查询</h1>
     <ul id="sliding-navigation">
-        <li class="sliding-element"><a href="filmquery.html" style="font-size:20px; font-family:verdana">电影</a></li>
-        <li class="sliding-element"><a href="actorquery.html" style="font-size:20px; font-family:verdana">演员</a></li>
-        <li class="sliding-element"><a href="directorquery.html" style="font-size:20px; font-family:verdana">导演</a></li>
-        <li class="sliding-element"><a href="voicequery.html" style="font-size:20px; font-family:verdana">旁白</a></li>
-        <li class="sliding-element"><a href="firmquery.html" style="font-size:20px; font-family:verdana">发行公司</a></li>
+        <li class="sliding-element"><a href="filmQuery.jsp" style="font-size:20px; font-family:verdana">电影</a></li>
+        <li class="sliding-element"><a href="actorQuery.jsp" style="font-size:20px; font-family:verdana">演员</a></li>
+        <li class="sliding-element"><a href="directorQuery.jsp" style="font-size:20px; font-family:verdana">导演</a></li>
+        <li class="sliding-element"><a href="voice_Query.jsp" style="font-size:20px; font-family:verdana">旁白</a></li>
+        <li class="sliding-element"><a href="firmQuery.jsp" style="font-size:20px; font-family:verdana">发行公司</a></li>
     </ul>
 </div>
 <div class="div-right2">

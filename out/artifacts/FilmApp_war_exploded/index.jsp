@@ -9,7 +9,7 @@
 <!DOCTYPE html >
 <html>
 <head>
-  <title>用户-查询主页</title>
+  <title>用户-主页</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="film/css/style.css" />
   <script type="text/javascript" src="film/js/jquery.js"></script>

@@ -4,9 +4,6 @@ import database.DBOperator;
 
 public class DeleteFilm {
 
-    private String username = "root1";
-    private String password = "L90efcad1";
-
     private String filmID;
     private String filmName;
 
@@ -24,7 +21,9 @@ public class DeleteFilm {
     }
 
     public int executeDelete(){
-        DBOperator dbOperator = new DBOperator(this.username,this.password,"film");
+        String username = "root1";
+        String password = "L90efcad1";
+        DBOperator dbOperator = new DBOperator(username, password,"film");
         int affectRows = dbOperator.update(this.sql);
         return affectRows;
     }

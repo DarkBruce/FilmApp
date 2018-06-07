@@ -36,7 +36,7 @@ public class Film {
         this.plot = plot;
     }
 
-    public String getFlimID() {
+    public String getFilmID() {
 
         return filmID;
     }

@@ -37,6 +37,14 @@
         <servlet-name>FilmDeleteServlet</servlet-name>
         <url-pattern>/FilmDelete</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>FilmUpdateServlet</servlet-name>
+        <servlet-class>Servlet.film.FilmUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FilmUpdateServlet</servlet-name>
+        <url-pattern>/FilmUpdate</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>FirmQueryServlet</servlet-name>

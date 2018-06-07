@@ -41,7 +41,7 @@
 <div class="bh">
     <div class="header">
         <div class="logo">
-            <h1><a href="voicequery.html"><img src="../img/logo.png" alt=""></a></h1>
+            <h1><a href="voice_Query.jsp"><img src="../img/logo.png" alt=""></a></h1>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 70%;max-width: 50%;display: block;width: 100%">
             <div class="title">
@@ -61,7 +61,7 @@
                 <li id="username"><span style="margin-right:20px;max-width:120px;display:block;overflow:hidden;">用户昵称</span>
                 </li>
                 <li><span>/</span></li>
-                <li id="logout"><a href="../login.html" style="">退出登录</a></li>
+                <li id="logout"><a href="../login.jsp" style="">退出登录</a></li>
             </ul>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 4.5%;max-width: 10%;display: block;width: 100%">
@@ -127,7 +127,7 @@ layui.use('table', function(){
             </table>
         </div>
         <div class="layui-col-xs6" style="margin-top: 20px">
-            <form id="filmform" class="layui-form layui-form-pane" action="" onsubmit="">
+            <form id="filmform" class="layui-form layui-form-pane" action="/FilmUpdate" onsubmit="">
                 <div class="layui-form-item">
                     <label class="layui-form-label">电影编号</label>
                     <div class="layui-input-block">
@@ -169,7 +169,7 @@ layui.use('table', function(){
                 <div class="layui-form-item layui-form-text">
                     <label class="layui-form-label">电影简介</label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入内容" name="FilmPot" class="layui-textarea"></textarea>
+                        <textarea placeholder="请输入内容" name="FilmPlot" class="layui-textarea"></textarea>
                     </div>
                 </div>
                 <div align="center">

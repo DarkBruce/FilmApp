@@ -30,10 +30,26 @@ public class DBOperator {
     private List<Firm> firmList = new ArrayList<>();
     private Firm firm;
 
+    /**
+     * 查询所用构造函数
+     * @param user
+     * @param password
+     * @param operateObject
+     */
     public DBOperator(String user, String password,String operateObject){
         this.user = user;
         this.password = password;
         this.operateObject = operateObject;
+    }
+
+    /**
+     * 普通构造函数
+     * @param user
+     * @param password
+     */
+    public DBOperator(String user,String password){
+        this.user = user;
+        this.password = password;
     }
 
     public Connection getSqlConnection(){
@@ -161,6 +177,31 @@ public class DBOperator {
             e.printStackTrace();
         }
         return result;
+    }
+
+    /**
+     * 更新电影前的预查询函数
+     * @param sql
+     * @return
+     */
+    public String preQueryFirmID(String sql){
+        Statement statement = getStatement();
+        String firmID = null;
+        try {
+            ResultSet resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                firmID = resultSet.getString("FirmID");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return firmID;
+    }
+
+    public int updateFilm(String sql){
+        int affectRows = 0;
+
+        return affectRows;
     }
 
     /**
