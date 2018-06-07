@@ -41,7 +41,7 @@
 <div class="bh">
     <div class="header">
         <div class="logo">
-            <h1><a href="voicequery.html"><img src="../img/logo.png" alt=""></a></h1>
+            <h1><a href="voice_Query.jsp"><img src="../img/logo.png" alt=""></a></h1>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 70%;max-width: 50%;display: block;width: 100%">
             <div class="title">
@@ -61,7 +61,7 @@
                 <li id="username"><span style="margin-right:20px;max-width:120px;display:block;overflow:hidden;">用户昵称</span>
                 </li>
                 <li><span>/</span></li>
-                <li id="logout"><a href="../login.html" style="">退出登录</a></li>
+                <li id="logout"><a href="../login.jsp" style="">退出登录</a></li>
             </ul>
         </div>
         <div class='cssmenu' style="margin-left: 0;flex: 0 0 4.5%;max-width: 10%;display: block;width: 100%">
