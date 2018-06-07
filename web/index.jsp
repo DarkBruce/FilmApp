@@ -11,28 +11,28 @@
 <head>
   <title>用户-查询主页</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/film/css/style.css" />
-  <script type="text/javascript" src="/film/js/jquery.js"></script>
-  <script type="text/javascript" src="/film/js/sliding_effect.js"></script>
-  <script type="application/javascript" src="/layui/layui.all.js"></script>
+  <link rel="stylesheet" type="text/css" href="film/css/style.css" />
+  <script type="text/javascript" src="film/js/jquery.js"></script>
+  <script type="text/javascript" src="film/js/sliding_effect.js"></script>
+  <script type="application/javascript" src="layui/layui.all.js"></script>
   <link href="layui/css/layui.css" rel="stylesheet" type="text/css" media="all"/>
   <link href="afctf/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="../afctf/css/reser.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="../afctf/css/countdown.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="../afctf/css/challenge.css" rel="stylesheet" type="text/css" media="all" />
-  <script src="../afctf/js/jquery-3.3.1.min.js"></script>
-  <script src="../afctf/js/layer.js"></script>
-  <script src="../afctf/js/echarts.min.js"></script>
-  <script src="../afctf/js/utils.js"></script>
-  <script src="../afctf/js/challenge.js"></script>
-  <script src="../afctf/js/inputLimit.js"></script>
-  <script type="text/javascript" src="../value_js/jquery.min.2.0.js"></script>
+  <link href="afctf/css/reser.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="afctf/css/countdown.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="afctf/css/challenge.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="afctf/js/jquery-3.3.1.min.js"></script>
+  <script src="afctf/js/layer.js"></script>
+  <script src="afctf/js/echarts.min.js"></script>
+  <script src="afctf/js/utils.js"></script>
+  <script src="afctf/js/challenge.js"></script>
+  <script src="afctf/js/inputLimit.js"></script>
+  <script type="text/javascript" src="value_js/jquery.min.2.0.js"></script>
 </head>
 <body>
 <div class="bh">
   <div class="header">
     <div class="logo">
-      <h1><a href="index.html"><img src="../img/logo.png" alt=""></a></h1>
+      <h1><a href="index.jsp"><img src="img/logo.png" alt=""></a></h1>
     </div>
     <div class='cssmenu' style="margin-left: 0;flex: 0 0 70%;max-width: 50%;display: block;width: 100%">
       <div class="title">
@@ -45,7 +45,7 @@
         <li id="username"><span style="margin-right:20px;max-width:120px;display:block;overflow:hidden;">用户昵称</span>
         </li>
         <li><span>/</span></li>
-        <li id="logout"><a href="../login.html" style="">退出登录</a></li>
+        <li id="logout"><a href="login.jsp" style="">退出登录</a></li>
       </ul>
     </div>
     <div class='cssmenu' style="margin-left: 0;flex: 0 0 4.5%;max-width: 10%;display: block;width: 100%">
@@ -59,7 +59,7 @@
 <div id="navigation-block">
   <h1>电影查询</h1>
   <ul id="sliding-navigation">
-    <li class="sliding-element"><a href="film/index.jsp" style="font-size:20px; font-family:verdana">电影</a></li>
+    <li class="sliding-element"><a href="film/filmQuery.jsp" style="font-size:20px; font-family:verdana">电影</a></li>
     <li class="sliding-element"><a href="film/actorQuery.jsp" style="font-size:20px; font-family:verdana">演员</a></li>
     <li class="sliding-element"><a href="film/directorQuery.jsp" style="font-size:20px; font-family:verdana">导演</a></li>
     <li class="sliding-element"><a href="film/voice_Query.jsp" style="font-size:20px; font-family:verdana">旁白</a></li>
@@ -68,8 +68,8 @@
 </div>
 
 <div class="maincontainer">
-  <script src='../afctf/js/TweenMax.min.js'></script>
-  <script src="../afctf/js/index.js"></script>
+  <script src='afctf/js/TweenMax.min.js'></script>
+  <script src="afctf/js/index.js"></script>
 </div>
 <div class="ftr1-bg">
   <div class="wrap">
@@ -84,7 +84,7 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" color="0,0,139" count="175" opacity="0.5" src="../canvas-nest.min.js"></script>
+<script type="text/javascript" color="0,0,139" count="175" opacity="0.5" src="canvas-nest.min.js"></script>
 <script type="text/javascript">
     /* 鼠标特效 */
     var a_idx = 0;

@@ -12,15 +12,14 @@ import java.io.IOException;
 
 @WebServlet(name = "FirmQueryServlet")
 public class FirmQueryServlet extends HttpServlet {
-    private String firmName;
-    private Firm firm;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        firmName = request.getParameter("FirmName");
+        request.setCharacterEncoding("utf-8");
+        String firmName = request.getParameter("FirmName");
         QueryFirm queryFirm = new QueryFirm(firmName);
         queryFirm.executeQuery();
-        this.firm = queryFirm.getFirm();
-        request.setAttribute("Firm",this.firm);
+        Firm firm = queryFirm.getFirm();
+        request.setAttribute("Firm", firm);
         request.getRequestDispatcher("/film/firmQueryResult.jsp").forward(request,response);
     }
 

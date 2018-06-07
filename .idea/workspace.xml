@@ -7,27 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e66788-f8b5-40af-b127-2d8610f25ef5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Servlet/film/FilmDeleteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/DeleteFilm.java" afterDir="false" />
       <change afterPath="$APPLICATION_CONFIG_DIR$/options/gitosc_settings.xml" afterDir="false" />
       <change afterPath="$APPLICATION_CONFIG_DIR$/options/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilmApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/WEB-INF/classes/Servlet/film/FilmQueryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/WEB-INF/classes/Servlet/film/FilmQueryServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/WEB-INF/classes/database/DBOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/WEB-INF/classes/database/DBOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/WEB-INF/classes/utils/QueryFilm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/WEB-INF/classes/utils/QueryFilm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/film/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/film/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmApp_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmApp/Servlet/film/FilmQueryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmApp/Servlet/film/FilmQueryServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmApp/database/DBOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmApp/database/DBOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmApp/utils/QueryFilm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmApp/utils/QueryFilm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bean/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bean/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bean/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bean/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/DBOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DBOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/QueryFilm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/QueryFilm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/film/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/film/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,26 +45,11 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="queryResult.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/film/queryResult.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/film/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="53" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+            <state relative-caret-position="182">
+              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,17 +57,17 @@
       <file leaf-file-name="FilmQueryServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="120">
+              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Film.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Film.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bean/Film.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="825">
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1274#1275#0" expanded="true" />
@@ -109,19 +82,31 @@
                 <element signature="e#1570#1571#0" expanded="true" />
                 <element signature="e#1615#1616#0" expanded="true" />
                 <element signature="e#1650#1651#0" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1760#1761#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1826#1827#0" expanded="true" />
+                <element signature="e#1854#1855#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryFirm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/QueryFirm.java">
+      <file leaf-file-name="FilmDeleteServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servlet/film/FilmDeleteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" selection-start-column="14" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirmQueryServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servlet/firm/FirmQueryServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -129,8 +114,8 @@
       <file leaf-file-name="QueryFilm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/QueryFilm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
+            <state relative-caret-position="310">
+              <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/Manager.java">
+      <file leaf-file-name="DeleteFilm.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils/DeleteFilm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="297">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -150,10 +135,11 @@
       <file leaf-file-name="DBOperator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/DBOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="123" column="38" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
+            <state relative-caret-position="291">
+              <caret line="158" column="50" lean-forward="true" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#query#0;class#DBOperator#0" />
               </folding>
             </state>
           </provider>
@@ -219,17 +205,19 @@
         <option value="$PROJECT_DIR$/src/user/User.java" />
         <option value="$PROJECT_DIR$/src/user/Manager.java" />
         <option value="$PROJECT_DIR$/web/film/filmQuery.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/film/firmQuery.jsp" />
         <option value="$PROJECT_DIR$/src/Bean/Firm.java" />
         <option value="$PROJECT_DIR$/src/utils/QueryFirm.java" />
-        <option value="$PROJECT_DIR$/src/Servlet/firm/FirmQueryServlet.java" />
         <option value="$PROJECT_DIR$/web/film/index.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/utils/QueryFilm.java" />
-        <option value="$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java" />
-        <option value="$PROJECT_DIR$/src/Bean/Film.java" />
         <option value="$PROJECT_DIR$/src/database/DBOperator.java" />
+        <option value="$PROJECT_DIR$/src/Bean/Film.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/utils/DeleteFilm.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java" />
+        <option value="$PROJECT_DIR$/src/Servlet/firm/FirmQueryServlet.java" />
+        <option value="$PROJECT_DIR$/src/Servlet/film/FilmDeleteServlet.java" />
       </list>
     </option>
   </component>
@@ -264,6 +252,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,15 +293,39 @@
             <path>
               <item name="FilmApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="FilmApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="firm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmApp" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmApp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="film" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FilmApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FilmApp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -489,7 +502,8 @@
       <workItem from="1528166950726" duration="574000" />
       <workItem from="1528167816515" duration="8762000" />
       <workItem from="1528261090109" duration="1461000" />
-      <workItem from="1528286578101" duration="1371000" />
+      <workItem from="1528286578101" duration="2247000" />
+      <workItem from="1528339006433" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="FilmSystem Project&#10;Create on May 16th, 2018">
       <created>1526474474206</created>
@@ -516,7 +530,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89161000" />
+    <option name="totallyTimeSpent" value="92378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,17 +551,17 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32900432" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50151056" side_tool="true" weight="0.23880596" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5022659" side_tool="true" weight="0.23880596" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32985073" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32987398" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.29402986" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.47763348" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848944" visible="true" weight="0.23880596" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49773413" visible="true" weight="0.23880596" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7980392" visible="true" weight="0.1978852" />
-      <window_info id="Web" order="2" sideWeight="0.20196079" side_tool="true" visible="true" weight="0.1978852" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79607844" visible="true" weight="0.20090635" />
+      <window_info id="Web" order="2" sideWeight="0.20392157" side_tool="true" visible="true" weight="0.20090635" />
       <window_info anchor="right" id="Database" order="6" weight="0.32930514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -570,6 +584,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18882175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -578,7 +593,6 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.47763348" />
       <window_info id="UI Designer" order="5" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="6" />
@@ -586,7 +600,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924472" visible="true" weight="0.2929293" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.47763348" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -612,20 +626,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bean/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -864,13 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/film/filmQuery.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -903,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/firm/FirmQueryServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/film/queryResult.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -924,47 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/QueryFirm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/QueryFilm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bean/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -972,20 +917,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/DBOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="123" column="38" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bean/Film.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="825">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1274#1275#0" expanded="true" />
@@ -1000,7 +935,96 @@
             <element signature="e#1570#1571#0" expanded="true" />
             <element signature="e#1615#1616#0" expanded="true" />
             <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1854#1855#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/QueryFirm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/DBOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="158" column="50" lean-forward="true" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#query#0;class#DBOperator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/QueryFilm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/film/FilmQueryServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/firm/FirmQueryServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/film/FilmDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DeleteFilm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
         </state>
       </provider>
     </entry>

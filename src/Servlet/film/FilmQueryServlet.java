@@ -15,31 +15,28 @@ import java.util.List;
 
 @WebServlet(name = "FilmQueryServlet")
 public class FilmQueryServlet extends HttpServlet {
-    private String filmName;
-    private String filmCategory;
-    private Boolean isName = false;
-
-    private List<Film> filmList = new ArrayList<>();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        this.filmName = request.getParameter("FilmName");
-        filmCategory = request.getParameter("kind");
-        if(filmName!=null) {
-            this.isName = true;
+        String filmName = request.getParameter("FilmName");
+        String filmCategory = request.getParameter("kind");
+        Boolean isName = false;
+        List<Film> filmList = new ArrayList<>();
+        if(filmName !=null) {
+            isName = true;
             QueryFilm queryFilm = new QueryFilm(filmName, true);
             queryFilm.executeQuery();
-            this.filmList = queryFilm.getFilmList();
-            request.setAttribute("filmList",this.filmList);
+            filmList = queryFilm.getFilmList();
+            request.setAttribute("filmList", filmList);
             request.getRequestDispatcher("film/filmNameQueryResult.jsp").forward(request,response);
         }
-        else if(filmCategory!=null){
-            this.isName = false;
+        else if(filmCategory !=null){
+            isName = false;
             QueryFilm queryFilm = new QueryFilm(filmCategory,false);
             queryFilm.executeQuery();
-            this.filmList = queryFilm.getFilmList();
-            request.setAttribute("filmList",this.filmList);
-            request.getRequestDispatcher("/film/filmCategoryQueryResult.jsp").forward(request,response);
+            filmList = queryFilm.getFilmList();
+            request.setAttribute("filmList", filmList);
+            request.getRequestDispatcher("film/filmCategoryQueryResult.jsp").forward(request,response);
         }
 
 
