@@ -22,7 +22,7 @@ public class FilmDeleteServlet extends HttpServlet {
         //影响行数，即删除的行数
         int affectRows;
 
-        if(filmName !=null){
+        if(!filmName.equals("")){
             DeleteFilm deleteFilm = new DeleteFilm(filmID, filmName);
             affectRows = deleteFilm.executeDelete();
             if(affectRows >0)

@@ -198,12 +198,6 @@ public class DBOperator {
         return firmID;
     }
 
-    public int updateFilm(String sql){
-        int affectRows = 0;
-
-        return affectRows;
-    }
-
     /**
      * 关闭SQL连接和Statement
      */

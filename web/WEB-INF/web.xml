@@ -45,6 +45,14 @@
         <servlet-name>FilmUpdateServlet</servlet-name>
         <url-pattern>/FilmUpdate</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>FilmInsertServlet</servlet-name>
+        <servlet-class>Servlet.film.FilmInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FilmInsertServlet</servlet-name>
+        <url-pattern>/FilmInsert</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>FirmQueryServlet</servlet-name>
@@ -54,5 +62,14 @@
         <servlet-name>FirmQueryServlet</servlet-name>
         <url-pattern>/FirmQuery</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>FirmInsertServlet</servlet-name>
+        <servlet-class>Servlet.firm.FirmInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirmInsertServlet</servlet-name>
+        <url-pattern>/FirmInsert</url-pattern>
+    </servlet-mapping>
+    
 
 </web-app>

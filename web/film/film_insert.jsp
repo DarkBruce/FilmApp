@@ -238,7 +238,7 @@ layui.use('table', function(){
             </table>
         </div>
         <div class="layui-col-xs6" style="margin-top: 20px">
-            <form id="filmform" class="layui-form layui-form-pane" action="" onsubmit="">
+            <form id="filmform" class="layui-form layui-form-pane" action="${pageContext.request.contextPath}/FilmInsert" method="post" onsubmit="">
                 <div class="layui-form-item">
                     <label class="layui-form-label">电影编号</label>
                     <div class="layui-input-block">
@@ -280,7 +280,7 @@ layui.use('table', function(){
                 <div class="layui-form-item layui-form-text">
                     <label class="layui-form-label">电影简介</label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入内容" name="FilmPot" class="layui-textarea"></textarea>
+                        <textarea placeholder="请输入内容" name="FilmPlot" class="layui-textarea"></textarea>
                     </div>
                 </div>
                 <div align="center">

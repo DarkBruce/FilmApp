@@ -24,7 +24,7 @@ public class UpdateFilm {
         DBOperator dbOperator = new DBOperator(username,password);
         String firmID = dbOperator.preQueryFirmID(this.preSql);
         this.sql = this.sql + firmID + "' where FilmID='" + film.getFilmID() + "' ;";
-        affectRows = dbOperator.updateFilm(this.sql);
+        affectRows = dbOperator.update(this.sql);
         return affectRows;
     }
 }

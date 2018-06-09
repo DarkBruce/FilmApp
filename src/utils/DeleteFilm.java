@@ -11,7 +11,7 @@ public class DeleteFilm {
 
     public DeleteFilm(String filmID){
         this.filmID = filmID;
-        this.sql = this.sql + filmID + "' ;";
+        this.sql = "delete from Film where FilmID='" + filmID + "' ;";
     }
 
     public DeleteFilm(String filmID,String filmName){
